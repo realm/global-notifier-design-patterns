@@ -27,7 +27,7 @@ const NOTIFIER_PATH = '^/.*/myUser$';
 * which were added, deleted, or modified in this change
 * create the admin user
 */
-const adminUser = Realm.Sync.User.adminUser(adminToken);
+const adminUser = Realm.Sync.User.adminUser(ADMIN_TOKEN);
 
 /**
  * This is the Schema of User Object that you'd like to open up synced realms with.
@@ -68,7 +68,7 @@ Realm.Sync.addListener(SERVER_URL, adminUser, NOTIFIER_PATH, 'change', (changeEv
     const users = realm.objects('User');
     const userInsertionIndices = changeEvent.changes.User.insertions;
     const userModificationIndices = changeEvent.changes.User.modifications;
-    const userDeletionIndices = changeEvent.changes.User.deletions
+    const userDeletionIndices = changeEvent.changes.User.deletions;
 
     for (const index of userInsertionIndices) {
         const insertedUserModel = users[index];
