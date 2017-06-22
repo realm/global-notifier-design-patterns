@@ -1,0 +1,17 @@
+{
+  "name": "gnotifier-users-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "realm": "^1.8.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6.10.3"
+  }
+}
