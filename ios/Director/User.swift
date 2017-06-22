@@ -35,10 +35,7 @@ extension User {
         email: String,
         favoriteFood: String
     ){
-        var array = [1, 2, 3, 4]
-        for i in array {
-            let a = i + 2
-        }
+        
     }
     
 }

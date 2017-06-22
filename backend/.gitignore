@@ -1,0 +1,6 @@
+node_modules
+*.realm
+*.realm.lock
+*.realm.management
+/realm-object-server
+tokens.json

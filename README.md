@@ -12,7 +12,18 @@ __Requirements__
 This project comes with an iOS Client Application and a NodeJS backend application.
 
 1. Run your local instance of Realm Object Server 
-2. Obtain _both_ your Enterprise Access Token and your Admin Access Token
+2. Obtain _both_ your Enterprise Access Token and your Admin Access Token.
+  
+  create a file called `backend/tokens.json`
+  ```javascript
+  {
+      'ADMIN_TOKEN': 'youradmintokenhere',
+      'ACCESS_TOKEN': 'yourenterpriseaccesstoken'
+  }
+  ```
+
+
 3. Fill in your tokens in `backend/src/index.js`
 4. Run the backend with: `node backend/src/index.js`
 5. Then run the iOS Application in the __ios__ directory with `open ios/Director.xcworkspace` and then debug run with `Command+R`.
+

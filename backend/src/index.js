@@ -1,15 +1,14 @@
 const Realm = require('realm')
-
+const tokens = require('./tokens')
 // Unlock Professional Edition APIs
-const ACCESS_TOKEN = "YOUR_REALM_ACCESS_TOKEN";
-Realm.Sync.setAccessToken(ACCESS_TOKEN);
+Realm.Sync.setAccessToken(tokens.ACCESS_TOKEN);
 
 /**
  * You can get the Admin Token from
  *    Linux: cat /etc/realm/admin_token.base64
  *    macOS: cat realm-object-server/admin_token.base64
  */
-const ADMIN_TOKEN = 'ADMIN_TOKEN';
+const ADMIN_TOKEN = tokens.ADMIN_TOKEN;
 
 // This is the realm:// URL of your Realm Object Server
 const SERVER_URL = 'realm://127.0.0.1:9080';
