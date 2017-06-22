@@ -1,0 +1,20 @@
+PODS:
+  - Eureka (3.0.0)
+  - Realm (2.8.3):
+    - Realm/Headers (= 2.8.3)
+  - Realm/Headers (2.8.3)
+  - RealmSwift (2.8.3):
+    - Realm (= 2.8.3)
+
+DEPENDENCIES:
+  - Eureka (~> 3.0.0)
+  - RealmSwift (~> 2.8.3)
+
+SPEC CHECKSUMS:
+  Eureka: f36fd440c3ebb7bfea0a4fbe6f16a05f1cb35906
+  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
+  RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
+
+PODFILE CHECKSUM: 0f652590cdf483ffd75815c78cf66fee74fcb770
+
+COCOAPODS: 1.2.1

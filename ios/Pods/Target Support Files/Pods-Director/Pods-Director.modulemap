@@ -1,0 +1,6 @@
+framework module Pods_Director {
+  umbrella header "Pods-Director-umbrella.h"
+
+  export *
+  module * { export * }
+}
