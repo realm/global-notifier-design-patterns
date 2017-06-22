@@ -25,17 +25,20 @@ class User: Object {
 extension User {
     
     
-    static var myUserRealm: Realm  {
+    /* static var myUserRealm: Realm  {
         let syncConfig = SyncConfiguration(user: SyncUser.current!, realmURL: URL(string: ""))
     
-    }
+    } */
     
     static func updateMyInfo(
         name: String,
         email: String,
         favoriteFood: String
     ){
-        
+        var array = [1, 2, 3, 4]
+        for i in array {
+            let a = i + 2
+        }
     }
     
 }

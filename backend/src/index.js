@@ -1,24 +1,28 @@
 const Realm = require('realm')
 
 // Unlock Professional Edition APIs
-const ACCESS_TOKEN = process.env.ACCESS_TOKEN || "YOUR_REALM_ACCESS_TOKEN";
+const ACCESS_TOKEN = "YOUR_REALM_ACCESS_TOKEN";
 Realm.Sync.setAccessToken(ACCESS_TOKEN);
 
-// Insert the Realm admin token here
-//   Linux:  cat /etc/realm/admin_token.base64
-//   macOS:  cat realm-object-server/admin_token.base64
-const ADMIN_TOKEN = process.env.ADMIN_TOKEN || 'ADMIN_TOKEN';
+/**
+ * You can get the Admin Token from
+ *    Linux: cat /etc/realm/admin_token.base64
+ *    macOS: cat realm-object-server/admin_token.base64
+ */
+const ADMIN_TOKEN = 'ADMIN_TOKEN';
 
-// the URL to the Realm Object Server
+// This is the realm:// URL of your Realm Object Server
 const SERVER_URL = 'realm://127.0.0.1:9080';
 
-// The regular expression you provide restricts the observed Realm files to only the subset you
-// are actually interested in. This is done in a separate step to avoid the cost
-// of computing the fine-grained change set if it's not necessary.
+/**
+ * The regular expression you provide restricts the observed Realm files to only the subset you
+ * are actually interested in. This is done in a separate step to avoid the cost
+ * of computing the fine-grained change set if it's not necessary.
+ */ 
 const NOTIFIER_PATH = '^/.*/myUser$';
 
 /** 
-*The callback is called for every observed Realm file whenever it
+* The callback is called for every observed Realm file whenever it
 * has changes. It is called with a change event which contains the path, the Realm,
 * a version of the Realm from before the change, and indexes indication all objects
 * which were added, deleted, or modified in this change
@@ -26,7 +30,9 @@ const NOTIFIER_PATH = '^/.*/myUser$';
 */
 const adminUser = Realm.Sync.User.adminUser(adminToken);
 
-
+/**
+ * This is the Schema of User Object that you'd like to open up synced realms with.
+ */
 const UserSchema = {
     name: 'User',
     primaryKey: '_id',
