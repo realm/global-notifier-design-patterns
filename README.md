@@ -27,3 +27,4 @@ This project comes with an iOS Client Application and a NodeJS backend applicati
 4. Run the backend with: `node backend/src/index.js`
 5. Then run the iOS Application in the __ios__ directory with `open ios/Director.xcworkspace` and then debug run with `Command+R`.
 
+![analytics](https://ga-beacon.appspot.com/UA-50247013-2/global-notifier-design-patterns/README?pixel)
